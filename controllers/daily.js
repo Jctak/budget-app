@@ -1,27 +1,6 @@
 const monthlyModel = require('../models/daily'),
     moment = require('moment');
 
-// exports.homepage_get = async (req, res) => {
-//     if(!!req.session.is_logged_in) {
-//         const id = await monthlyModel.getUser(req.session.email);
-//         const balance = await monthlyModel.getRemainingBalance(id.id);
-//         res.render('template', {
-//             locals: {
-//                 title: `Welcome to my dungeon`,
-//                 balance: balance,
-//                 is_logged_in: req.session.is_logged_in,
-//                 userName: req.session.first_name,
-//                 email: req.session.email
-//             },
-//             partials: {
-//                 content: 'partial-daily-home'
-//             }
-//         });
-//     } else {
-//         res.redirect('/users/login');
-//     }
-// }
-
 exports.weekly_expenses_get = async (req, res) => {
     if(!!req.session.is_logged_in) {
         const id = await monthlyModel.getUser(req.session.email);
@@ -29,7 +8,7 @@ exports.weekly_expenses_get = async (req, res) => {
         const currentDate = moment().format('MMMM Do YYYY, h:mm:ss a');
 
         let remainingBalance;
-        if ('June 23rd 2019, 5:06:47 pm' === refreshTime.reset_time) { //'June 20th 2019, 2:12:11 am'
+        if (currentDate === refreshTime.reset_time) { //'June 20th 2019, 2:12:11 am'
             await monthlyModel.resetBudget(refreshTime.set_budget, id.id)
             .then(async() => {
                 remainingBalance = await monthlyModel.getRemainingBalance(id.id);
@@ -80,7 +59,7 @@ exports.weekly_expenses_post = async (req, res) => {
             await monthlyModel.subtractFromBalance(expense, id.id);
 
             let remainingBalance;
-            if ('June 23rd 2019, 5:06:47 pm' === refreshTime.reset_time) {
+            if (currentDate === refreshTime.reset_time) {
                 await monthlyModel.resetBudget(refreshTime.set_budget, id.id)
                 .then(async() => {
                     remainingBalance = await monthlyModel.getRemainingBalance(id.id);

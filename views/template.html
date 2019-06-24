@@ -22,6 +22,7 @@
       </div>
       <div id="navMenu" class="navbar-menu has-background-dark level">
         ${!!is_logged_in ? `
+<<<<<<< HEAD
           <a href="/setup" class="navbar-item has-text-white has-background-dark level-item">Add/Modify Budget</a>
           <!-- <a href="/daily" class="navbar-item has-text-white has-background-dark level-item">Add Expense</a> -->
           <a href="/daily/expenses" class="navbar-item has-text-white has-background-dark level-item">View Transactions</a>
@@ -29,19 +30,24 @@
 
           <a class="navbar-item has-text-white has-background-dark level-item" href='/users/logout'>Logout</a>
           <a class="navbar-item has-text-white has-background-dark level-item">Hello, ${userName}! ${email}</a>
+=======
+          <a href="/setup" class="hovertest navbar-item has-text-white has-background-dark level-item">Add/Modify Budget</a>
+          <a href="/daily/expenses" class="hovertest navbar-item has-text-white has-background-dark level-item">View Transactions</a>
+          <a href="/daily/history" class="hovertest navbar-item has-text-white has-background-dark level-item">All History</a>
+          <a class="hovertest navbar-item has-text-white has-background-dark level-item" href='/users/logout'>Logout</a>
+          <a class="navbar-item has-text-white has-background-dark level-item" style="color: #A69349 !important;">${email}</a>
+>>>>>>> 8bf488f3ad7c03ec036fa34d79dc01f5ff3db16e
         ` : `
-          <a class="navbar-item has-text-white has-background-dark level-item" href='/users/login'>Login</a>
+          <a class="hovertest navbar-item has-text-white has-background-dark level-item" href='/users/login'>Login</a>
         `}
       </div>
   </nav>
   <!-- <h1 class="container">${title}</h1> -->
   <main>${content}</main>
-  <footer>
-    <div class="footer-style">
+  <footer class="has-background-dark has-text-white has-text-centered">
       <div class="foot">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quo possimus totam repudiandae, officiis omnis molestiae. Eligendi doloribus, dolore, ullam atque mollitia accusantium odio natus tenetur repellendus, minima maxime autem!
+        <a href="https://github.com/elizhang227"><i class="fab fa-github" style="font-size:3rem; color: gold;"></i></a>
       </div>
-    </div>
     <script type="text/javascript">
       (function() {
         const burger = document.querySelector('.burger');

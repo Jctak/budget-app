@@ -34,20 +34,21 @@ span {
 
 /******** Login Page *********/
 .section-login {
-  background-color:#263448;
-  color:black;
-  height: 85vh;
-  padding-top: 100px;
+  height: 100vh;
+  background-color:#D0CFBE;
+  color:#A69349;
+  padding: 30px 0;
 }
 
 .container--login {
-  background-color: white;
-  box-shadow: 0 0 3px #ccc;
+  background-color: #D0CFBE;
+  box-shadow: 0 0 50px black;
+  border-radius: 10px;
   font-family: 'Source Sans Pro', sans-serif;
-  margin: 60px 30% 0;
+  margin: 10px 30% 0;
   padding: 30px;
-  -moz-box-shadow: 0 0 3px #ccc;
-  -webkit-box-shadow: 0 0 3px #ccc;
+  -moz-box-shadow: 0 0 3px black;
+  -webkit-box-shadow: 5px 10px 15px black;
 }
 
 .h-sign {
@@ -76,6 +77,7 @@ span {
 
 .login--form h3 {
   font-size: 2rem;
+  color: #A69349;
 }
 
 .login--form input {
@@ -86,21 +88,21 @@ span {
 
 /****** Signup Page *********/
 
-.section-signup{
-  background-color: #263448;
+.section-signup {
+  background-color: #D0CFBE;
   color:black;
-  height: 85vh;
-  padding-top: 100px;
+  height: 87vh;
+  padding-top: 50px;
 }
 
 .container--signup {
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0 30%;
-  padding: 30px;
+  padding: 20px;
 }
 
 .container--signup p {
-  color: white;
+  color: rgb(68, 59, 24);
   font-size: 2.5rem;
   text-align: center;
   line-height: 45px;
@@ -127,7 +129,7 @@ span {
 }
 
 .container--signup a:hover {
-  color:white;
+  color:rgb(68, 59, 24);
 }
 
 .signin-button {
@@ -274,9 +276,9 @@ span {
 /******** Setup Page *********/
 
 .section-setup {
-  background-color:#263448;
-  color:white;
-  height: 85vh;
+  background-color: #D0CFBE;
+  color:rgb(68, 59, 24);
+  height: 87vh;
   padding-top: 200px;
 }
 
@@ -287,7 +289,7 @@ span {
 }
 
 .add-modify-budget {
-  background-color:#263448;
+  background-color:#D0CFBE;
   font-size: 1.5rem;
 }
 
@@ -308,13 +310,13 @@ span {
 .add-modify-budget button {
   border: none;
   color:red;
+  background-color: #D0CFBE;
   font-size: 1.75rem;
   margin-left: 10px;
 }
 
 .add-modify-budget button:hover {
   color:green;
-  background-color: red;
 }
 
 .p-budget-amt {
@@ -323,9 +325,13 @@ span {
 }
 
 /******** Daily Page **********/
+
 .expense-section {
-  height: 85vh;
-  background-color:#263448;
+  background-color:#D0CFBE;
+}
+
+.section-outter-expense {
+  background-color:#D0CFBE;
   display:grid;
   grid-template-columns: 0.6fr 1.4fr;
   grid-template-rows: 180px auto;
@@ -333,39 +339,42 @@ span {
   grid-template-areas:
     "expense table"
     "addexpense table";
-  padding: 80px 8% 100px;
+  padding: 80px 8% 400px;
 }
 
 .div-expense {
-  background-color:#263448;
+  background-color:#D0CFBE;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.75rem;
   grid-area: expense;
 }
 
 .div-expense p {
-  color:#f1c550;
+  color:#A69349;
 }
 
 .thead-expense {
-  background-color: #ff8246;
-  color: black;
+  background-color: #D0CFBE;
+  color: #A69349;
+}
+
+#navMenu .hovertest:hover {
+  color:#A69349 !important;
 }
 
 .table-expense {
-  color: white;
+  color: rgb(68, 59, 24);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.3rem;
   grid-area:table;
   line-height: 30px;
 }
 
-.table-expense tr {
-  border-bottom: 1px solid #ddd;
+.table-expense td {
+  padding-right: 30px;
 }
-
-.table-expense tr:hover{
-  background-color: #5ca0d3;
+.table-expense tr {
+  border-bottom: 1px solid #A69349;
 }
 
 .section-add-expense {
@@ -378,32 +387,32 @@ span {
 }
 
 .label-expense {
-  padding-left: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.5rem;
   width:100%;
   display:inline-block;
 }
 
 .p-expense {
-  /* color: #ff7a8a; */
-  color:#6b778d;
+  color:rgb(68, 59, 24) !important;
   font-size: 1.5rem;
   padding-bottom: 10px;
 }
 
 .b-exp {
-  color:#aee7e8;
-  padding-right: 58px;
+  color:#A69349;
+  padding-right: 56px;
 }
 
 .b-cat {
-  color:#aee7e8;
+  color:#A69349;
   padding-right: 50px;
 }
 
 .b-desc {
   color:#aee7e8;
   padding-right: 23px;
+  color: #A69349;
 }
 
 .label-expense input{
@@ -422,8 +431,16 @@ span {
   padding-left: 40px;
 }
 
+.p-expense {
+  color: rgb(54, 54, 54);
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  /* padding-left: 20px; */
+}
+
 .expense-button {
-  background-color: #85ef47;
+  background-color: rgb(189, 170, 95);
+  border-color: #A69349;
   border-radius: 30%;
   margin-left: 10px;
   width: 100px;
@@ -434,72 +451,46 @@ span {
 
 /********* Daily/History Page **********/
 .expense-history-section {
-  height: 85vh;
-  background-color:#263448;
+  background-color:#D0CFBE;
   display:grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 130px auto;
+  grid-template-rows: 100px auto;
   grid-template-areas:
     "p-hist"
     "table";
-  padding: 80px 20% 0;
+  padding: 10px 20% 700px;
 }
 
 .p-history {
-  color: white;
+  color: rgb(68, 59, 24);
   font-size: 3rem;
   grid-area: p-hist;
 }
 
 /******* Category History Page *******/
 .section-category {
-  height: 85vh;
-  background-color:#263448;
+  background-color: #D0CFBE;
   display:grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100px auto;
   grid-template-areas:
     "p"
     "table";
-  padding: 50px 20%;
+  padding: 50px 20% 100px;
 }
 
 .section-category p {
-  color:white;
+  color:rgb(68, 59, 24);
   font-size: 2rem;
   grid-area: p;
   text-align: center;
 }
 
-
-
-@media only screen and (max-width:895px) {
-  .landing-page {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-row-gap: 100px;
-    grid-template-areas:
-      "divOne"
-      "divTwo";
-    margin-left:20%;
-    margin-right:20%;
-  }
-
-  .testimonials {
-    background-color: #ef8172;
-    text-align: center;
-    color:#fff;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px auto;
-    grid-template-areas:
-      "p"
-      "one"
-      "two"
-      "three";
-  }
+.foot {
+  padding: 5px 0;
 }
+
+
 
 @media only screen and (max-width:1280px) {
   .landing-page {
@@ -528,14 +519,54 @@ span {
   }
 }
 
-@media only screen and (max-width:947px) {
-  .expense-section {
+@media only screen and (max-width: 1097px){
+
+  .section-outter-expense {
+    background-color:#D0CFBE;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 120px auto;
+    grid-template-rows: 110px auto;
     grid-template-areas:
       "expense"
       "table";
+    padding: 10px 0 600px;
+    margin: 0;
+  }
+
+
+  .table-expense td {
+    padding-right: 30px;
+  }
+}
+
+@media only screen and (max-width:947px) {
+
+  .section-outter-expense {
+    background-color:#D0CFBE;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 110px auto;
+    grid-template-areas:
+      "expense"
+      "table";
+    padding: 10px 0 600px;
+  }
+
+  .expense-section {
+    background-color:#D0CFBE;
+  }
+
+  .table-expense {
+    color: rgb(68, 59, 24);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    grid-area:table;
+    line-height: 30px;
+  }
+
+
+  .p-expense {
+    padding-top: 50px;
   }
 
   .div-expense {
@@ -563,5 +594,40 @@ span {
 
   .landing-page {
     grid-template-rows: 50px 550px
+  }
+}
+
+@media only screen and (max-width:895px) {
+  .landing-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 100px;
+    grid-template-areas:
+      "divOne"
+      "divTwo";
+    margin-left:20%;
+    margin-right:20%;
+  }
+
+  .testimonials {
+    background-color: rgb(33, 33, 33);
+    text-align: center;
+    color:#fff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px auto;
+    grid-template-areas:
+      "p"
+      "one"
+      "two"
+      "three";
+  }
+
+  .section-setup {
+    background-color: #D0CFBE;
+    color:rgb(68, 59, 24);
+    height: 87vh;
+    padding-top: 100px;
   }
 }
